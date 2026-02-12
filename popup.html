@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <div class="logo">E</div>
+        <h2>Echomind</h2>
+      </div>
+      <button id="settingsBtn" title="Settings">⚙️</button>
+    </div>
+
+    <!-- Settings View -->
+    <div id="settingsView" class="hidden">
+      <!-- API URL is now internal/hardcoded -->
+      <div class="input-group">
+        <label>Extension API Key</label>
+        <input type="password" id="apiKey" placeholder="sk_echomind_...">
+      </div>
+      <div class="btn-row">
+          <button id="testBtn" class="secondary-btn">Test Connection</button>
+          <button id="saveBtn" class="primary-btn">Save Settings</button>
+      </div>
+      <button id="backBtn" class="text-btn">Back to Clipper</button>
+      <p id="status" class="status"></p>
+    </div>
+
+    <!-- Main View -->
+    <div id="mainView">
+      <div class="input-group">
+        <label>Title</label>
+        <input type="text" id="pageTitle">
+      </div>
+      <button id="clipBtn" class="primary-btn">Clip to Notebook</button>
+      
+      <div id="loading" class="hidden">
+        <div class="spinner"></div> <span id="loadingText">Saving...</span>
+      </div>
+      
+      <p id="clipStatus" class="status"></p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

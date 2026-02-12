@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Echomind Web Clipper",
+  "version": "1.4",
+  "description": "Clip websites to Echomind",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
